@@ -36,15 +36,47 @@ int Node::getPayload()
     return this->payload;
 }
 
-void Node::VisitInOrder()
+void Node::visitInOrder()
 {
     if (leftChild != NULL)   
     {
-        leftChild->VisitInOrder();
+        leftChild->visitInOrder();
     }
-    cout << payload << endl;
+
+    cout << payload << "  ";
+
     if (rightChild != NULL)
     {
-        rightChild->VisitInOrder();
+        rightChild->visitInOrder();
     }
+}
+
+void Node::visitPreOrder()
+{
+    cout << payload << "  ";
+    
+    if (leftChild != NULL)   
+    {
+        leftChild->visitPreOrder();
+    }
+
+    if (rightChild != NULL)
+    {
+        rightChild->visitPreOrder();
+    }
+}
+
+void Node::visitPostOrder()
+{
+    if (leftChild != NULL)   
+    {
+        leftChild->visitPostOrder();
+    }
+    
+    if (rightChild != NULL)
+    {
+        rightChild->visitPostOrder();
+    }
+
+    cout << payload << "  "; 
 }

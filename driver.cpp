@@ -1,5 +1,6 @@
 #include "Node.hpp"
 #include <stdlib.h>
+#include <iostream>
 
 using namespace std;
 
@@ -32,11 +33,18 @@ int main()
     Node* node = new Node(1);
     insertNode(node, 0);
     insertNode(node, 8);
-    insertNode(node, 5);
-    insertNode(node, 10);
-    insertNode(node, 3);
+    insertNode(node, 2);
+    insertNode(node, 4);
+    insertNode(node, 7);
+    insertNode(node, 12);
+    insertNode(node, 9);
 
-    node->VisitInOrder();
+    node->visitInOrder();
+    cout << endl;
+    node->visitPreOrder();
+    cout << endl;
+    node->visitPostOrder();
+    cout << endl;
 
 }
 

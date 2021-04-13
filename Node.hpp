@@ -12,5 +12,7 @@ class Node
         Node* getRightChild();
         Node* getLeftChild();
         int getPayload();
-        void VisitInOrder();
+        void visitInOrder();
+        void visitPreOrder();
+        void visitPostOrder();
 };
